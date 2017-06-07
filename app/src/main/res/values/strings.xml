@@ -1,0 +1,10 @@
+<resources>
+
+    <string name="app_name">eArt</string>
+    <string name="charge_name">Charge</string>
+    <string name="art_info_name">Art information</string>
+    <string name="train_info_name">Train information</string>
+    <string name="take_picture_name">Take picture</string>
+
+    <string name="popup_qcm_text">To gain the power to charge your phone, you have to answer a few questions about art</string>
+</resources>
