@@ -33,6 +33,15 @@
             android:name=".TrainInfoActivity"
             android:label="@string/app_name">
         </activity>
+
+        <activity
+            android:name=".QcmAnswerActivity"
+            android:label="@string/app_name">
+        </activity>
+
+        
+
+
     </application>
 
 </manifest>

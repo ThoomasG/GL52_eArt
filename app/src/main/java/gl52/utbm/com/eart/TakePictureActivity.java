@@ -2,12 +2,10 @@ package gl52.utbm.com.eart;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.graphics.Camera;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
 
 /**
  * Created by Thomas on 07/06/2017.
