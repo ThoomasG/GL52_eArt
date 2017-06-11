@@ -7,11 +7,11 @@
     android:padding="20dp">
 
     <TextView
-        android:id="@+id/textResult"
+        android:id="@+id/textQuestion"
         android:layout_width="323dp"
         android:layout_height="210dp"
         android:gravity="center"
-        android:text="Quelle est la capitale de la France ?"
+        android:text=""
         android:textSize="30sp" ></TextView>
 
     <Button
@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:padding="20dp"
-        android:text="Marseille"
+        android:text=""
         android:textSize="18sp" ></Button>
 
     <Button
@@ -29,7 +29,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:padding="20dp"
-        android:text="Paris"
+        android:text=""
         android:textSize="18sp" ></Button>
 
     <Button
@@ -39,7 +39,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:padding="20dp"
-        android:text="Lyon"
+        android:text=""
         android:textSize="18sp" ></Button>
 
 

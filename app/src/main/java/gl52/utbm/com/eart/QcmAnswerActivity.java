@@ -3,6 +3,8 @@ package gl52.utbm.com.eart;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 /**
@@ -11,7 +13,8 @@ import android.widget.TextView;
 
 public class QcmAnswerActivity extends Activity {
 
-    final String VILLE = "ville";
+    final String EXTRA_ANSWER= "answer";
+    final String EXTRA_USER_ANSWER = "userAnswer";
     String resultat = "Wrong answer !";
 
 
@@ -22,9 +25,10 @@ public class QcmAnswerActivity extends Activity {
         setContentView(R.layout.activity_qcm_answer);
 
         Intent intent = getIntent();
-        String selectedCity = intent.getStringExtra(VILLE);
+        String userAnswer = intent.getStringExtra(EXTRA_USER_ANSWER);
+        String goodAnswer = intent.getStringExtra(EXTRA_ANSWER);
 
-        if(selectedCity.toLowerCase().equals("paris")){
+        if(userAnswer.toLowerCase().equals(goodAnswer.toLowerCase())){
             resultat = "Good answer !";
         }
 
@@ -32,6 +36,15 @@ public class QcmAnswerActivity extends Activity {
         if(resultView != null){
             resultView.setText(resultat);
         }
+
+        final Button back = (Button) findViewById(R.id.backButton);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(QcmAnswerActivity.this, ChargePhoneActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
     }
