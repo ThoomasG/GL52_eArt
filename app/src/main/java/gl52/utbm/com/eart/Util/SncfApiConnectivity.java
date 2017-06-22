@@ -7,22 +7,22 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.annotation.TargetApi;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.util.Base64;
 
 /**
  * Created by Thomas on 12/06/2017.
  */
 
+@TargetApi(Build.VERSION_CODES.CUPCAKE)
 public class SncfApiConnectivity extends AsyncTask{
 
     private final String USER_AGENT = "Mozilla/5.0";
     private final String KEY = "60363df2-c1f6-42c5-92d3-5433869dbbcb";
     private String requestUrl;
 
-    public SncfApiConnectivity() {
-
-    }
 
     @Override
     protected Object doInBackground(Object[] params) {

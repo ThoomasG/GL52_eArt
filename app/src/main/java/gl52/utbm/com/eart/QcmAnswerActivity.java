@@ -24,18 +24,6 @@ public class QcmAnswerActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_qcm_answer);
 
-        Intent intent = getIntent();
-        String userAnswer = intent.getStringExtra(EXTRA_USER_ANSWER);
-        String goodAnswer = intent.getStringExtra(EXTRA_ANSWER);
-
-        if(userAnswer.toLowerCase().equals(goodAnswer.toLowerCase())){
-            resultat = "Good answer !";
-        }
-
-        TextView resultView = (TextView) findViewById(R.id.textResultQuestion);
-        if(resultView != null){
-            resultView.setText(resultat);
-        }
 
         final Button back = (Button) findViewById(R.id.backButton);
         back.setOnClickListener(new View.OnClickListener() {

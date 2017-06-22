@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -19,7 +20,7 @@ public class ChargePhoneActivity extends Activity {
     final String EXTRA_ANSWER= "answer";
     final String EXTRA_USER_ANSWER = "userAnswer";
 
-    int numQuestion = (int)Math.random()*7;
+    int numQuestion = (int)(Math.random()*7);
     String [] actualQuestion = QuizzQuestions.questions[numQuestion];
     String correctAnswer = actualQuestion[4];
 
