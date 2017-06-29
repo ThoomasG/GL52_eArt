@@ -45,7 +45,9 @@ public class MainActivity extends AppCompatActivity {
         buttonChargePhone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Intent intent = new Intent(MainActivity.this, ChargePhoneActivity.class);
+                intent.putExtra("answer", 0);
                 startActivity(intent);
             }
         });
@@ -55,6 +57,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, BluetoothActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button buttonTestBluetooth = (Button) findViewById(R.id.bluetoothTestButton);
+        buttonTestBluetooth.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, BluetoothTestActivity.class);
                 startActivity(intent);
             }
         });

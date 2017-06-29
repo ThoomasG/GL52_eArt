@@ -19,7 +19,7 @@ import java.util.Set;
 import gl52.utbm.com.eart.R;
 
 public class BluetoothActivity extends Activity  {
-    Button b1,b2,b3,b4;
+    Button b1,b2,b3,b4,b5;
     private BluetoothAdapter BA;
     private Set<BluetoothDevice>pairedDevices;
     ListView lv;
@@ -29,10 +29,12 @@ public class BluetoothActivity extends Activity  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bluetooth);
 
-        b1 = (Button) findViewById(R.id.button);
+        b1=(Button) findViewById(R.id.button);
         b2=(Button)findViewById(R.id.button2);
         b3=(Button)findViewById(R.id.button3);
         b4=(Button)findViewById(R.id.button4);
+        b5=(Button)findViewById(R.id.button5);
+
 
         BA = BluetoothAdapter.getDefaultAdapter();
         lv = (ListView)findViewById(R.id.listView);
@@ -47,6 +49,17 @@ public class BluetoothActivity extends Activity  {
             Toast.makeText(getApplicationContext(), "Already on", Toast.LENGTH_LONG).show();
         }
     }
+
+    public void send(View v){
+        if (BA.isEnabled()) {
+            String testMsg = "Message de test";
+            (new Thread(new BluetoothCommunicator(testMsg))).start();
+        } else {
+            Toast.makeText(getApplicationContext(), "Activate your bluetooth", Toast.LENGTH_LONG).show();
+        }
+    }
+
+
 
     public void off(View v){
         BA.disable();

@@ -11,39 +11,12 @@
     tools:context="gl52.utbm.com.eart.MainActivity">
 
     <Button
-        android:text="Train information"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/trainInfoButton"
-        android:layout_above="@+id/artInfoButton"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="40dp" />
-
-    <Button
         android:text="Charge phone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/chargeButton"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="31dp"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
-
-    <Button
-        android:text="Art information"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/artInfoButton"
-        android:layout_marginBottom="40dp"
-        android:layout_above="@+id/chargeButton"
-        android:layout_centerHorizontal="true" />
-
-    <Button
-        android:text="Picture"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/pictureButton"
-        android:layout_marginBottom="40dp"
-        android:layout_above="@+id/trainInfoButton"
         android:layout_centerHorizontal="true" />
 
     <Button
@@ -51,7 +24,41 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/bluetoothButton"
-        android:layout_marginBottom="40dp"
-        android:layout_above="@+id/trainInfoButton"
+        android:layout_marginBottom="47dp"
+        android:layout_above="@+id/chargeButton"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="Art information"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/artInfoButton"
+        android:layout_below="@+id/trainInfoButton"
+        android:layout_alignStart="@+id/bluetoothTestButton" />
+
+    <Button
+        android:text="Train information"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/trainInfoButton"
+        android:layout_marginTop="13dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="Bluetooth Test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bluetoothTestButton"
+        android:layout_marginBottom="11dp"
+        android:layout_above="@+id/pictureButton"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="Picture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pictureButton"
+        android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 </RelativeLayout>
